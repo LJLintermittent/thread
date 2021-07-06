@@ -2,6 +2,7 @@ package com.learn.pool;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
 
 /**
  * 一些声明信息
@@ -13,8 +14,11 @@ import java.util.concurrent.Executors;
  */
 public class TestPool {
     public static void main(String[] args) {
-        ExecutorService pool = Executors.newFixedThreadPool(10);
 
+        ExecutorService pool = Executors.newFixedThreadPool(10);
+        ExecutorService singleThreadExecutor = Executors.newSingleThreadExecutor();
+        ExecutorService cachedThreadPool = Executors.newCachedThreadPool();
+        ScheduledExecutorService scheduledThreadPool = Executors.newScheduledThreadPool(1);
         pool.execute(new MyThread());
         pool.execute(new MyThread());
         pool.execute(new MyThread());
