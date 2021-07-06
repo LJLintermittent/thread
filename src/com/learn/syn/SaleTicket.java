@@ -61,7 +61,12 @@ class ticket {
 
     private final ReentrantLock lock = new ReentrantLock();
 
-    public int sale() {
+    /**
+     * synchronized在发生异常时，会自动释放线程占有的锁，因此不会导致死锁的发生
+     * lock在发生异常时，如果没有主动通过unlock去释放锁，则很可能造成死锁现象
+     * 通过lock可以知道有没有成功获取到锁，而synchronized却无法办到
+     */
+    public  int sale() {
         lock.lock();
         try {
             if (num > 0) {
