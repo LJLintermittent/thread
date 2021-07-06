@@ -1,5 +1,7 @@
 package com.learn.syn;
 
+import java.util.concurrent.locks.ReentrantLock;
+
 /**
  * Description:
  * date: 2021/7/6 19:24
@@ -54,14 +56,21 @@ public class SaleTicket {
 }
 
 class ticket {
+
     private int num = 30;
 
-    public synchronized int sale() {
-        if (num > 0) {
-            return num = num - 1;
-        } else {
-            return 0;
+    private final ReentrantLock lock = new ReentrantLock();
+
+    public int sale() {
+        lock.lock();
+        try {
+            if (num > 0) {
+                return num = num - 1;
+            } else {
+                return 0;
+            }
+        } finally {
+            lock.unlock();
         }
     }
-
 }
