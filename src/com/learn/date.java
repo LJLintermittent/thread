@@ -2,10 +2,7 @@ package com.learn;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.time.Instant;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
-import java.util.Calendar;
+
 
 /**
  * Description:
@@ -31,5 +28,4 @@ public class date {
         String s = dateFormat.format(System.currentTimeMillis());
         System.out.println(s);
     }
-
 }

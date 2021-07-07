@@ -13,7 +13,7 @@ import java.util.concurrent.locks.ReentrantLock;
  * @email 18066550996@163.com
  */
 @SuppressWarnings("all")
-public class customizeCondition {
+public class CustomizeCondition {
 
     /**
      * 三个线程，第一个线程打印5次AA，第二个线程打印10次BB，第三个线程打印15次CC，重复n轮
