@@ -30,7 +30,7 @@ public class TestThread4 implements Runnable{
     public static void main(String[] args) {
         TestThread4 testThread4 = new TestThread4();
         new Thread(testThread4,"小明").start();
-        new Thread(testThread4,"徐欣裕").start();
+        new Thread(testThread4,"。。。").start();
         new Thread(testThread4,"李佳乐").start();
     }
 }

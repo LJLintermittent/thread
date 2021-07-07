@@ -12,7 +12,7 @@ public class UnSafeBank {
     public static void main(String[] args) {
         Account account = new Account(1000,"基金");
         Bank bank = new Bank(account,50,"李佳乐");
-        Bank bank1 = new Bank(account,100,"徐欣裕");
+        Bank bank1 = new Bank(account,100,"嘻嘻嘻");
         bank1.setPriority(10);
         bank.setPriority(1);
 
