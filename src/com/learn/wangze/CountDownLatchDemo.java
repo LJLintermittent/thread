@@ -1,5 +1,6 @@
 package com.learn.wangze;
 
+
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.FutureTask;
 
@@ -13,9 +14,13 @@ import java.util.concurrent.FutureTask;
  */
 @SuppressWarnings("all")
 public class CountDownLatchDemo {
+
+    private static int NUM = 10;
+
     public static void main(String[] args) throws InterruptedException {
-        CountDownLatch countDownLatch = new CountDownLatch(10);
-        for (int i = 1; i <= 10; i++) {
+
+        CountDownLatch countDownLatch = new CountDownLatch(NUM);
+        for (int i = 1; i <= NUM; i++) {
             int finalI = i;
             new Thread(new FutureTask<String>(() -> {
                 System.out.println(Thread.currentThread().getName() + "号线程离开");
