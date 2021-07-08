@@ -1,4 +1,4 @@
-package com.learn.syn;
+package com.learn.wangze;
 
 /**
  * Description:

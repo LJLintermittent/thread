@@ -1,4 +1,4 @@
-package com.learn.syn;
+package com.learn.wangze;
 
 import java.util.concurrent.locks.ReentrantLock;
 
@@ -15,7 +15,7 @@ public class SaleTicket {
 
     public static void main(String[] args) {
 
-        ticket ticket = new ticket();
+        Ticket2 ticket = new Ticket2();
 
         new Thread(() -> {
             for (int i = 0; i < 40; i++) {
@@ -55,7 +55,7 @@ public class SaleTicket {
     }
 }
 
-class ticket {
+class Ticket2 {
 
     private int num = 30;
 
